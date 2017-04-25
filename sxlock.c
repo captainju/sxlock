@@ -72,7 +72,7 @@ static Bool  opt_hidelength;
 /* need globals for signal handling */
 Display *dpy;
 Dpms dpms_original = { .state = True, .level = 0, .standby = 600, .suspend = 600, .off = 600 };  // holds original values
-int dpms_timeout = 10;  // dpms timeout until program exits
+int dpms_timeout = 3;  // dpms timeout until program exits
 Bool using_dpms;
 
 pam_handle_t *pam_handle;
@@ -314,7 +314,7 @@ main(int argc, char** argv) {
 
     /* set default values for command-line arguments */
     opt_passchar = "*";
-    opt_font = "-misc-fixed-medium-r-*--17-120-*-*-*-*-iso8859-1";
+    opt_font = "-*-droid sans-*-*-*-*-20-*-100-100-*-*-iso8859-1";
     opt_username = username;
     opt_hidelength = False;
 
